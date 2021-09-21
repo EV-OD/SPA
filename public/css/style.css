@@ -1,0 +1,177 @@
+body{
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+
+*{
+	margin: 0;
+}
+
+:root{
+	--sideBarWidth:200px;
+	--navBarHeight: 50px;
+	--sideBarRightMargin:10px;
+	--sideBarAnimationRate:0.7s;
+}
+
+.navBar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: block;
+	height: var(--navBarHeight);
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.navBar .loaderArea .loader{
+	width:0;
+	border:1px solid gray;
+	position: relative;
+	bottom:0;
+}
+.navBar .loaderArea .activeLoader{
+	animation-name: loadContent;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;
+	animation-play-state: paused;
+}
+
+@keyframes loadContent{
+	0%{
+		width: 0;
+	}
+	50%{
+		width: 60%;
+		animation-play-state: paused;
+	}
+	100%{
+		width:100%;
+	}
+}
+
+.sideBar{
+	position: fixed;
+	left:0;
+	top:var(--navBarHeight);
+	height: 100%;
+	width: var(--sideBarWidth);
+	margin-right: var(--sideBarRightMargin);
+	overflow: hidden;
+	transition: width 0.7s ease;
+	border-right:1px solid rgba(235,235,235);
+}
+
+
+.sideBar .menuBar ul{
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	padding-top: 10px;
+	display: block;
+}
+
+.sideBar .menuBar{
+	overflow: hidden;
+	width: 200px;
+}
+
+.navBar .toggleBtn{
+	width: 200px;
+	height: var(--navBarHeight);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: row;
+}
+
+.navBar .toggleBtn .title .brand{
+	font-family: Roboto, Noto, sans-serif;
+	margin-left: 0;
+	font-size: 15px;
+}
+
+.navBar .toggleBtn .toggle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border-radius: 100%;
+	width:40px;
+	height: 40px;
+	background: transparent;
+
+}
+
+.navBar .toggleBtn .toggle .line{
+	width:20px;
+	height:3px;
+	background-color: #606060;
+	margin: 1.5px;
+}
+
+
+.navBar .toggleBtn .toggle:active{
+	background: rgba(235,235,235,0.6);
+}
+
+.sideBar .menuBar ul li{
+}
+
+.sideBar .menuBar ul .active{
+	background-color: #e5e5e5;
+}
+
+.sideBar .menuBar ul li a{
+	display: block;
+	color: black;
+	text-decoration: none;
+	height: 40px;
+	font-size: 16px;
+    font-weight: 500;
+    vertical-align: center;
+    line-height: 40px;
+    font-family: Roboto, Noto, sans-serif;
+    position: relative;
+}
+
+.sideBar .menuBar ul li a .tab{
+	position: absolute;
+	left:70px;
+}
+
+.sideBar .menuBar ul .active .icon{
+	color: rgb(100,100,255);
+}
+
+.sideBar .menuBar ul li a .icon{
+	position: absolute;
+	left: 35px;
+	transform: translate(-50%,0);
+}
+
+.contentBar{
+	position: fixed;
+	height: 100%;
+	width:calc(100% - var(--sideBarWidth));
+	top: var(--navBarHeight);
+	left: calc(var(--sideBarWidth) + var(--sideBarRightMargin));
+	transition: left var(--sideBarAnimationRate) ease;
+}
+.contents{
+	height: 100%;
+	width:100%;
+}
+.content{
+	height: 100%;
+	width:100%;
+	overflow: auto;
+	width:calc(100% - 10px);
+}
+.noActive{
+	display: none;
+}

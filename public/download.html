@@ -1,0 +1,111 @@
+<div class="contentBar">
+  <div class="consoleBar">
+    <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+      <g>
+        <title>Layer 1</title>
+        <rect fill="#C97A86" stroke-width="6" stroke-dasharray="null" opacity="undefined" x="3" y="55" width="432" height="254" id="svg_2" rx="19" stroke="#FFDCEC" />
+        <text fill="#153723" stroke-width="0" stroke-dasharray="null" stroke-opacity="null" fill-opacity="null" opacity="undefined" x="154.40802" y="111.8424" id="svg_5" font-size="24" font-family="monospace" text-anchor="start" xml:space="preserve" transform="matrix(0.7539751548876695,0,0,0.69513501226902,53.419716161147264,30.328797684749585) " stroke="#FFDCEC">isexist folder -dir</text>
+        <text fill="#153723" stroke-width="0" stroke-dasharray="null" stroke-opacity="null" fill-opacity="null" opacity="undefined" x="37.97323" y="126.97669" id="svg_6" font-size="18" font-family="monospace" text-anchor="start" xml:space="preserve" transform="matrix(0.8387111433908956,0,0,0.7326770713689311,15.407945671306692,34.36650609092574) " stroke="#FFDCEC">True</text>
+        <text fill="#153723" stroke-width="0" stroke-dasharray="null" stroke-opacity="null" fill-opacity="null" opacity="undefined" x="147.77651" y="215.4194" id="svg_8" font-size="24" font-family="monospace" text-anchor="start" xml:space="preserve" transform="matrix(0.7539751548876695,0,0,0.69513501226902,53.419716161147264,30.328797684749585) " stroke="#FFDCEC">import cloner</text>
+        <text fill="#153723" stroke-width="0" stroke-dasharray="null" stroke-opacity="null" fill-opacity="null" opacity="undefined" x="32.0117" y="237.53017" id="svg_9" font-size="18" font-family="monospace" text-anchor="start" xml:space="preserve" transform="matrix(0.8387111433908956,0,0,0.7326770713689311,15.407945671306692,34.36650609092574) " stroke="#FFDCEC">imported</text>
+        <text fill="#153723" stroke-width="0" stroke-dasharray="null" opacity="undefined" x="-12.6443" y="108.77306" id="svg_4" font-size="24" font-family="monospace" text-anchor="start" xml:space="preserve" transform="matrix(0.5475988204578571,0,0,0.612429398668688,42.2585378081247,39.650845232538586) " stroke="#619E73" font-weight="normal" font-style="normal">D:/Allwcons/user&gt;</text>
+        <text fill="#153723" stroke-width="0" stroke-dasharray="null" stroke-opacity="null" fill-opacity="null" opacity="undefined" x="-12.6443" y="224.08496" id="svg_12" font-size="24" font-family="monospace" text-anchor="start" xml:space="preserve" transform="matrix(0.5475988204578571,0,0,0.6372786208134578,43.2585378081247,35.220483579870525) " stroke="#FFDCEC" font-weight="normal" font-style="normal">D:/Allwcons/user&gt;</text>
+      </g>
+
+    </svg>
+  </div>
+  <a href="https://github.com/pythons65/allwcons/raw/main/main.exe" download="Allwcons" class="anchorDownloader">
+    <button class="downloader">download</button>
+  </a>
+  <div class="typewriter detail">
+    <p class="line-1 anim-typewriter">console in better format</p>
+  </div>
+</div>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap");
+.download {
+  margin: 0;
+  height: 100vh;
+  background: repeating-linear-gradient(135deg, transparent 0px, #e66465 35px, #9198e5 40px), repeating-linear-gradient(45deg, transparent 0px, #e66465 4px, #9198e5 40px);
+  color: white;
+  font-family: cursive;
+}
+
+
+.contentBar {
+  margin-top:2px;
+  display: flex;
+  flex-direction: row;
+}
+.contentBar .consoleBar svg {
+  width: 450px;
+  height: 320px;
+  position: absolute;
+  top: 0;
+  transform: scale(0.8) perspective(600px) rotateY(10deg) translate(20px, 10px);
+  transition: 0.5s;
+}
+.contentBar .consoleBar svg:hover {
+  transform: scale(0.8) perspective(600px) rotateY(20deg) translate(20px, 10px);
+}
+.contentBar .detail {
+  float: right;
+  margin-right: 50px;
+  position: relative;
+  left: 52%;
+  top: 150px;
+  color: #836060;
+  /* Animation */
+}
+.contentBar .detail .line-1 {
+  width: 20em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 160%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+.contentBar .detail .anim-typewriter {
+  animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+.contentBar .downloader {
+  background: #00b894;
+  border: none;
+  border-radius: 6px;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+}
+.contentBar .downloader:hover {
+  background: #00b850;
+}
+.contentBar .downloader:active {
+  opacity: 0.8;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+  
+</style>

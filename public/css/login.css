@@ -1,0 +1,106 @@
+
+.login{
+  margin-top:2px;
+  background-color: #e0e0e0;
+}
+.loginArea{
+  --length:400px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width:var(--length);
+  height: var(--length);
+  display: grid;
+  border-radius: 7px;
+background: #e0e0e0;
+box-shadow: inset 6px 6px 8px #b8b8b8,
+            inset -6px -6px 8px #ffffff;
+  place-items:center;
+}
+.loginForm{
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:-20px;
+}
+.formInput{
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: 1.5px solid #3485e4;
+  background: none;
+  transition: all 0.2s;
+  padding-left: 10px;
+  padding-right: 10px; 
+  transition: border .1s ease;
+  position: relative;
+  border-radius: 7px;
+  background: transparent;
+  background-color: #e0e0e0; 
+
+}
+
+
+.formInput:focus{
+box-shadow: inset 5px 5px 10px #cecece,
+            inset -5px -5px 10px #f2f2f2;
+}
+.form{
+    margin:10px 0px;
+}
+.formLabel{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.formBtn{
+    border:1px solid #b7cddc;
+    background: #3498db;
+    clip-path: circle(50% at 50% 50%);
+    padding:10px 20px;
+    font-size:20px;
+    font-family: Monospace;
+    cursor: pointer;
+    outline: none;
+    color:white;    
+    margin:10px;
+    transition: .8s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+.formBtn:hover{
+    clip-path: circle(100px at 50% 50%);
+}
+.formBtn::before{
+    content: "";
+    position: absolute;
+    left:-10%;
+    top:-50%;
+    width:120%;
+    height:0%;
+    background:#3498db;
+    z-index: -1;
+    transition: .8s;
+    border-radius:40px;
+}
+.formBtn:hover::before{
+    height:200%;
+}
+.detail{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .7em;
+  display: none;
+}
+.sucess{
+  color: rgb(8, 179, 8);
+}
+.error{
+  color: rgb(226, 52, 52);
+}
+.activeDetail{
+  display: block;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+    <script src="https://kit.fontawesome.com/e90324677a.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/signup.css">
+
+</head>
+<body>
+
+	<nav class="navBar">
+		<div class="toggleBtn">
+			<div class="toggle">
+				<div class="line"></div>
+				<div class="line rotater"></div>
+				<div class="line"></div>
+				
+			</div>
+				<div class="title">
+					<h1 class="brand">Allwcons</h1>
+				</div>
+		</div>
+		<div class="loaderArea">
+			<div class="loader activeLoader"></div>
+		</div>
+	</nav>
+
+	<div class="sideBar">
+
+		<div class="menuBar">
+			<ul>
+				<li>
+					<a href="#" class="sideBar_nav homeTab" data-class="home">
+						<span class="icon">
+							<i class="fas fa-home"></i>
+						</span>
+						<span class="tab">Home</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="sideBar_nav tab2 downloadTab" data-class="download">
+					<span class="icon">
+						<i class="fas fa-download"></i>
+					</span>
+					<span class="tab">Downloads</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="sideBar_nav tab3 loginTab" data-class="login">
+					<span class="icon">
+						<i class="fas fa-user-plus"></i>
+					</span>
+					<span class="tab">Login</span>
+				</a>
+			</li>
+
+      <li>
+				<a href="#" class="sideBar_nav tab4 signupTab" data-class="signup">
+					<span class="icon">
+						<i class="fas fa-user-edit"></i>
+					</span>
+					<span class="tab">Signup</span>
+				</a>
+			</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="contentBar">
+		<div class="contents">
+			<div class="content home noActive">
+				{{home}}
+			</div>
+			<div class="content download noActive">
+				{{download}}
+			</div>
+			<div class="content login noActive">
+				{{login}}
+			</div>
+      <div class="content signup noActive">
+				{{signup}}
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="js/htmlFetch.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
